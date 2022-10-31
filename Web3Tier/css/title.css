@@ -1,0 +1,55 @@
+.tieude-muctin {
+    background-image: url("../Hinh/trangchu/tieude-muctin-blue.jpg");
+    background-repeat: no-repeat;
+    text-align: center;
+    display: inline-block;
+    width: 220px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+    .tieude-muctin a {
+        font-family: Arial;
+        color: white;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+        .tieude-muctin a:hover {
+            color: #cccccc;
+            transition: 0.2s;
+        }
+
+.tieude-bantinchitiet {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    background-color: #b42624;
+    text-align: center;
+    margin-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+    .tieude-bantinchitiet a { 
+        font-family: Arial;
+        font-size: 13px;
+        color: white;
+        text-decoration: none;
+    }
+
+        .tieude-bantinchitiet a:hover {
+            color: #cccccc;
+            transition: 0.2s;
+        }
+
+.tieude-khonglienket a:hover {
+    color: white;
+}
+
+.tieude-sau {
+    margin-top: 10px;
+}

@@ -1,0 +1,309 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web3Tier.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="google-site-verification" content="4JOq2dNLmRLuleT98lbbls-S3naV9PldY-mzw1cpSxI" />
+    <title>TDMWATER.VN</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .Khung {
+            background: #383838 url("../Hinh/trangchu/3dBg.png") no-repeat bottom;
+            -moz-border-radius: 6px; /* tren Firefox */
+            -webkit-border-radius: 6px; /* tren Safari */
+            position: relative;
+        }
+
+        .KhungWeb {
+            background-color: #747474;
+            width: 960px;
+            border: 8px solid #747474;
+            -moz-border-radius: 6px; /* tren Firefox */
+            -webkit-border-radius: 6px; /* tren Safari */
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .Banner {
+            background: url('/Hinh/banner/banner1.png') left no-repeat,url('/Hinh/banner/banner2.png') center no-repeat,url('/Hinh/banner/banner3.png') no-repeat right;
+            height: 163px;
+        }
+
+        #cssmenu {
+            padding-top: 0px;
+        }
+
+            #cssmenu ul {
+                margin: auto;
+                padding: 5px 0px 0px 10px;
+                background: #f4f4f4; /* Old browsers */
+                background: -moz-linear-gradient(top, #f4f4f4 0%, #ffffff 50%, #eaeaea 50%, #eaeaea 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(50%,#ffffff), color-stop(50%,#eaeaea), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, #f4f4f4 0%,#ffffff 50%,#eaeaea 5050%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, #f4f4f4 0%,#ffffff 50%,#eaeaea 50%,#eaeaea 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, #f4f4f4 0%,#ffffff 50%,#eaeaea 50%,#eaeaea 100%); /* IE10+ */
+                background: linear-gradient(to bottom, #f4f4f4 0%,#ffffff 50%,#eaeaea 50%,#eaeaea 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+                line-height: 100%;
+                font-family: Tahoma;
+                font-size: 11px;
+            }
+
+            #cssmenu li {
+                margin: 0px 4px 0px 0px;
+                padding-bottom: 6px;
+                float: left;
+                position: relative;
+                list-style: none;
+            }
+
+            #cssmenu a,
+            #cssmenu a:link {
+                font-family: Tahoma;
+                height: 30px;
+                line-height: 30px;
+                font-weight: 600;
+                font-size: 12px;
+                color: #131313;
+                text-decoration: none;
+                text-align: center;
+                display: block;
+                padding: 5px 5px;
+                margin: 0;
+            }
+
+                #cssmenu a:hover {
+                    background: #000;
+                    color: #fff;
+                    zoom: 1.0;
+                }
+
+            #cssmenu li:hover > a {
+                background: none;
+                color: #D00900;
+                text-decoration: none;
+            }
+
+            #cssmenu ul ul li:hover a,
+            #cssmenu li:hover li a {
+                background: none;
+                border: none;
+                color: black;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+            }
+
+            #cssmenu ul ul a:hover {
+                color: #d00900 !important;
+            }
+
+            #cssmenu ul a:active {
+            }
+
+        .selected {
+            color: #D00900 !important;
+            text-decoration: none;
+        }
+
+        #cssmenu li:hover > ul {
+            display: block;
+        }
+
+        #cssmenu ul ul {
+            display: none;
+            width: 245px;
+            position: absolute;
+            top: 46px;
+            left: 0px;
+            background: white;
+            border-top: 1px solid #089ed0;
+            z-index: 1500;
+        }
+
+            #cssmenu ul ul:last-child {
+                border-bottom: 1px solid #0080ab;
+            }
+
+            #cssmenu ul ul li {
+                border-bottom: 1px dotted #bcbcbc;
+                float: none;
+                margin: 0;
+                padding: 3px;
+            }
+
+            #cssmenu ul ul a,
+            #cssmenu ul ul a:link {
+                height: 17px;
+                line-height: 17px;
+                font-family: Tahoma;
+                font-weight: normal;
+                font-size: 12px;
+                text-align: left;
+                color: black;
+            }
+
+        #cssmenu ul:after {
+            content: '.';
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+
+        .style1 {
+            text-decoration: none;
+        }
+
+        #footer-bg {
+            background: #00a3d9 url('../Hinh/footer/footer-bg.png') no-repeat bottom;
+            font-family: Arial;
+            font-size: 15px;
+            padding-left: 10px;
+            text-decoration: none;
+            border-top: 1px solid #00749c;
+        }
+
+        #thongketruycap-bg {
+            background: url('../Hinh/footer/thongketruycap-bg.png') no-repeat;
+        }
+
+        .sub-menu {
+            text-decoration: none;
+            color: white !important;
+            font-family: Arial;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
+            .sub-menu:hover {
+                text-decoration: underline;
+            }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#nav li a').each(function (index) {
+                if (this.href.trim() == window.location || this.href.trim() == '') {
+                    $(this).addClass("selected");
+                    var url = window.location;
+                }
+            });
+        });
+    </script>
+    <link rel="Shortcut Icon" href="~/hinh/banner/logo-tdmwater.png" />
+</head>
+<body class="Khung">
+    <form id="form1" runat="server">
+        <div>
+            <table cellpadding="0" cellspacing="0" class="KhungWeb" align="center">
+                <!-- Banner -->
+                <tr style="width: 960px">
+                    <td class="Banner">
+                        <a href="http://tdmwater.vn">
+                            <img src="../Hinh/banner/logo-tdmwater.png" /></a>
+                    </td>
+                </tr>
+                <!-- Menu -->
+                <tr style="width: 960px">
+                    <td>
+                        <div id='cssmenu'>
+                            <ul id="nav">
+                                <li><a href="../ASPX/index.aspx">TRANG CHỦ</a></li>
+                                <li><a href="#">GIỚI THIỆU</a>
+                                    <ul>
+                                        <li><a href="../aspx/Gioithieuchung.aspx">Giới thiệu chung</a></li>
+                                         <li><a href="../aspx/HoSoPhapLy.aspx">Hồ sơ pháp lý</a></li>
+                                        <li><a href="../aspx/Gioithieudichvu.aspx">Giới thiệu dịch vụ</a></li>
+                                        <li><a href="../aspx/Banlanhdao.aspx">Ban lãnh đạo</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../ASPX/linhvuckinhdoanh.aspx">LĨNH VỰC KINH DOANH</a></li>
+                                <li><a href="../ASPX/congbothongtin.aspx">CÔNG BỐ THÔNG TIN</a>
+                                    <ul>
+                                        <li><a href="../aspx/CBTT_ThongTinNhaDauTu.aspx">Thông tin nhà đầu tư</a></li>
+                                        <li><a href="../aspx/CBTT_DaiHoiDongCDBT.aspx">Đại hội đồng cổ đông bất thường</a></li>
+                                        <li><a href="../aspx/CBTT_DaiHoiDongCDTN.aspx">Đại hội đồng cổ đông thường niên</a></li>
+                                        <li><a href="../aspx/CBTT_BanTinNhaDauTu.aspx">Bản tin nhà đầu tư</a></li>
+                                        <li><a href="../aspx/CongBoThongTin.aspx">Báo cáo tài chính</a></li>
+                                        <li><a href="../aspx/CBTT_BaoCaoThuongNien.aspx">Báo cáo thường niên</a></li>
+                                        <li><a href="../aspx/CBTT_ThongTinCoPhieu.aspx">Thông tin cổ phiếu</a></li>
+                                        <li><a href="../aspx/CBTT_KetNoiNhaDauTu.aspx">Kết nối nhà đầu tư</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">TIN TỨC - SỰ KIỆN</a>
+                                    <ul>
+                                        <li><a href="#">Tin tức hoạt động</a></li>
+                                        <li><a href="#">Tin tức cổ đông</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../ASPX/TinChatLuongNuoc.aspx">CHẤT LƯỢNG NƯƠC</a></li>
+                                <li><a href="../ASPX/album.aspx">HÌNH ẢNH</a></li>
+                                <li><a href="../ASPX/lienhe.aspx">LIÊN HỆ</a></li>
+                                <li><a href="https://mail.tdmwater.vn">EMAIL</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" width="960px" height="130px" id="footer-bg">
+                            <tr>
+                                <td id="footer-menu" style="padding-top: 10px; position: relative;">
+                                    <img src="../Hinh/footer/tencty-text-footer.png" />
+                                </td>
+                                <td id="Td1" style="padding-top: 10px; position: relative; padding-left: 256px;">
+                                    <img src="../Hinh/footer/thongketruycap-text-footer.png" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: White; line-height: 200%; font-size: 12px; vertical-align: top; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);">
+                                    <span class="style1">Địa chỉ:</span> Số 11B đường Ngô Văn Trị, P. Phú Lợi, Tp. Thủ Dầu Một, Tỉnh Bình Dương<br />
+                                    <span class="style1">Tel:</span> 0274.3842255 - 842277 -- Fax: 0274.3841838<br />
+                                    <span class="style1">Email:</span> contact@tdmwater.vn<br />
+                                    <span class="style1">Website:</span> http://tdmwater.vn<br />
+                                </td>
+                                <td style="line-height: 220%; font-size: 13px; vertical-align: top; padding-top: 6px; padding-left: 220px;">
+                                    <table cellpadding="0" cellspacing="0" id="thongketruycap-bg" width="281px" height="69px">
+                                        <tr>
+                                            <td style="line-height: 220%; font-size: 12px; width: 25px; padding-left: 40px;">
+                                                <img src="../Hinh/footer/dangonline-icon.png" /></td>
+                                            <td style="color: White; line-height: 220%; font-size: 12px; width: 90px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);">Đang online:</td>
+                                            <td style="color: White; line-height: 150%; font-size: 12px; padding-left: 83px;">
+                                                <% =Application["visitors_online"].ToString()%></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: White; line-height: 220%; font-size: 12px; width: 25px; padding-left: 40px;">
+                                                <img src="../Hinh/footer/tongtruycap-icon.png" /></td>
+                                            <td style="color: White; line-height: 220%; font-size: 12px; width: 90px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);">Tổng truy cập:</td>
+                                            <td style="color: White; line-height: 220%; font-size: 12px; padding-left: 83px;">
+                                                <% =Application["TatCa"].ToString()%></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #00455b; height: 28px; padding-top: 4px; position: relative; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
+                        <a href="../aspx/Index.aspx" class="sub-menu">TRANG CHỦ</a>
+                        <a href="#" class="sub-menu">GIỚI THIỆU</a>
+                        <a href="../aspx/Lienhe.aspx" class="sub-menu">LIÊN HỆ</a>
+                        <a title="Lên đầu trang" href="#" onclick="return vtlai_croll_top()">
+                            <img width="24px" height="11px" style="position: absolute; left: 50%; bottom: 0; z-index: 1" id="backtotop-icon" src="../Hinh/footer/backtotop-icon.png">
+                        </a>
+                        <img src="../Hinh/trangchu/light-bottom.png" style="position: absolute; bottom: 0; left: 20px; z-index: 1000;" />
+                    </td>
+                </tr>
+            </table>
+            <div style="height: 66px"></div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,1514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{05BF3CE9-973C-4660-B14D-01E90C72A16E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web3Tier</RootNamespace>
+    <AssemblyName>Web3Tier</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\WEBSITE\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CKEditor.NET">
+      <HintPath>..\..\..\WEBSITE\Bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\QuanTri.aspx" />
+    <Content Include="Admin\QuanTriAlbum.aspx" />
+    <Content Include="Admin\QuanTriHinhAnh.aspx" />
+    <Content Include="Admin\QuanTriLienHe.aspx" />
+    <Content Include="Admin\QuanTriNguoiDung.aspx" />
+    <Content Include="Admin\QuanTriTinCK.aspx" />
+    <Content Include="Admin\QuanTriTinTuc.aspx" />
+    <Content Include="Admin\QuanTriVideos.aspx" />
+    <Content Include="ASCX\Album.ascx" />
+    <Content Include="ASCX\CBTT_KetNoiNhaDauTu.ascx" />
+    <Content Include="ASCX\CBTT_ThongTinCoPhieu.ascx" />
+    <Content Include="ASCX\CBTT_BaoCaoThuongNien.ascx" />
+    <Content Include="ASCX\CBTT_BaoCaoTaiChinh.ascx" />
+    <Content Include="ASCX\CBTT_DaiHoiDongCDTN.ascx" />
+    <Content Include="ASCX\CBTT_DaiHoiDongCDBT.ascx" />
+    <Content Include="ASCX\CBTT_ThongTinNhaDauTu.ascx" />
+    <Content Include="ASCX\HoSoPhapLy.ascx" />
+    <Content Include="ASCX\GioiThieuDichVu.ascx" />
+    <Content Include="ASCX\GioiThieuChung.ascx" />
+    <Content Include="ASCX\ChiTietTin.ascx" />
+    <Content Include="ASCX\CongBoThongTin.ascx" />
+    <Content Include="ASCX\HinhAnh.ascx" />
+    <Content Include="ASCX\Index.ascx" />
+    <Content Include="ASCX\LienHe.ascx" />
+    <Content Include="ASCX\BanLanhDao.ascx" />
+    <Content Include="ASCX\Linhvuckinhdoanh.ascx" />
+    <Content Include="ASCX\Login.ascx" />
+    <Content Include="ASCX\Popup.ascx" />
+    <Content Include="ASCX\QuanTri.ascx" />
+    <Content Include="ASCX\QuanTriAlbum.ascx" />
+    <Content Include="ASCX\QuanTriHinhAnh.ascx" />
+    <Content Include="ASCX\QuanTriNguoiDung.ascx" />
+    <Content Include="ASCX\QuanTriTinCK.ascx" />
+    <Content Include="ASCX\QuanTriTinTuc.ascx" />
+    <Content Include="ASCX\QuanTriVideo.ascx" />
+    <Content Include="ASCX\QuanTriYeuCauLienHe.ascx" />
+    <Content Include="ASCX\ThongBao.ascx" />
+    <Content Include="ASCX\CBTT_BanTinNhaDauTu.ascx" />
+    <Content Include="ASCX\TinChatLuongNuoc.ascx" />
+    <Content Include="ASPX\Album.aspx" />
+    <Content Include="ASPX\CBTT_DaiHoiDongCDTN.aspx" />
+    <Content Include="ASPX\CBTT_BaoCaoTaiChinh.aspx" />
+    <Content Include="ASPX\CBTT_BaoCaoThuongNien.aspx" />
+    <Content Include="ASPX\CBTT_ThongTinCoPhieu.aspx" />
+    <Content Include="ASPX\CBTT_KetNoiNhaDauTu.aspx" />
+    <Content Include="ASPX\CBTT_DaiHoiDongCDBT.aspx" />
+    <Content Include="ASPX\CBTT_ThongTinNhaDauTu.aspx" />
+    <Content Include="ASPX\GioiThieuDichVu.aspx" />
+    <Content Include="ASPX\GioiThieuChung.aspx" />
+    <Content Include="ASPX\ChiTietTinTuc.aspx" />
+    <Content Include="ASPX\Congbothongtin2.aspx" />
+    <Content Include="ASPX\HinhAnh.aspx" />
+    <Content Include="ASPX\HoSoPhapLy.aspx" />
+    <Content Include="ASPX\index.aspx" />
+    <Content Include="ASPX\LienHe.aspx" />
+    <Content Include="ASPX\BanLanhDao.aspx" />
+    <Content Include="ASPX\linhvuckinhdoanh.aspx" />
+    <Content Include="ASPX\Popup.aspx" />
+    <Content Include="ASPX\ThongBao.aspx" />
+    <Content Include="ASPX\CBTT_BanTinNhaDauTu.aspx" />
+    <Content Include="ASPX\TinChatLuongNuoc.aspx" />
+    <Content Include="ASPX\WebForm1.aspx" />
+    <Content Include="ASPX\CongBoThongTin.aspx" />
+    <Content Include="ckeditor\adapters\jquery.js" />
+    <Content Include="ckeditor\build-config.js" />
+    <Content Include="ckeditor\ckeditor.js" />
+    <Content Include="ckeditor\config.js" />
+    <Content Include="ckeditor\contents.css" />
+    <Content Include="ckeditor\lang\af.js" />
+    <Content Include="ckeditor\lang\ar.js" />
+    <Content Include="ckeditor\lang\bg.js" />
+    <Content Include="ckeditor\lang\bn.js" />
+    <Content Include="ckeditor\lang\bs.js" />
+    <Content Include="ckeditor\lang\ca.js" />
+    <Content Include="ckeditor\lang\cs.js" />
+    <Content Include="ckeditor\lang\cy.js" />
+    <Content Include="ckeditor\lang\da.js" />
+    <Content Include="ckeditor\lang\de.js" />
+    <Content Include="ckeditor\lang\el.js" />
+    <Content Include="ckeditor\lang\en-au.js" />
+    <Content Include="ckeditor\lang\en-ca.js" />
+    <Content Include="ckeditor\lang\en-gb.js" />
+    <Content Include="ckeditor\lang\en.js" />
+    <Content Include="ckeditor\lang\eo.js" />
+    <Content Include="ckeditor\lang\es.js" />
+    <Content Include="ckeditor\lang\et.js" />
+    <Content Include="ckeditor\lang\eu.js" />
+    <Content Include="ckeditor\lang\fa.js" />
+    <Content Include="ckeditor\lang\fi.js" />
+    <Content Include="ckeditor\lang\fo.js" />
+    <Content Include="ckeditor\lang\fr-ca.js" />
+    <Content Include="ckeditor\lang\fr.js" />
+    <Content Include="ckeditor\lang\gl.js" />
+    <Content Include="ckeditor\lang\gu.js" />
+    <Content Include="ckeditor\lang\he.js" />
+    <Content Include="ckeditor\lang\hi.js" />
+    <Content Include="ckeditor\lang\hr.js" />
+    <Content Include="ckeditor\lang\hu.js" />
+    <Content Include="ckeditor\lang\id.js" />
+    <Content Include="ckeditor\lang\is.js" />
+    <Content Include="ckeditor\lang\it.js" />
+    <Content Include="ckeditor\lang\ja.js" />
+    <Content Include="ckeditor\lang\ka.js" />
+    <Content Include="ckeditor\lang\km.js" />
+    <Content Include="ckeditor\lang\ko.js" />
+    <Content Include="ckeditor\lang\ku.js" />
+    <Content Include="ckeditor\lang\lt.js" />
+    <Content Include="ckeditor\lang\lv.js" />
+    <Content Include="ckeditor\lang\mk.js" />
+    <Content Include="ckeditor\lang\mn.js" />
+    <Content Include="ckeditor\lang\ms.js" />
+    <Content Include="ckeditor\lang\nb.js" />
+    <Content Include="ckeditor\lang\nl.js" />
+    <Content Include="ckeditor\lang\no.js" />
+    <Content Include="ckeditor\lang\pl.js" />
+    <Content Include="ckeditor\lang\pt-br.js" />
+    <Content Include="ckeditor\lang\pt.js" />
+    <Content Include="ckeditor\lang\ro.js" />
+    <Content Include="ckeditor\lang\ru.js" />
+    <Content Include="ckeditor\lang\si.js" />
+    <Content Include="ckeditor\lang\sk.js" />
+    <Content Include="ckeditor\lang\sl.js" />
+    <Content Include="ckeditor\lang\sq.js" />
+    <Content Include="ckeditor\lang\sr-latn.js" />
+    <Content Include="ckeditor\lang\sr.js" />
+    <Content Include="ckeditor\lang\sv.js" />
+    <Content Include="ckeditor\lang\th.js" />
+    <Content Include="ckeditor\lang\tr.js" />
+    <Content Include="ckeditor\lang\ug.js" />
+    <Content Include="ckeditor\lang\uk.js" />
+    <Content Include="ckeditor\lang\vi.js" />
+    <Content Include="ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor\lang\zh.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="ckeditor\plugins\fakeobjects\images\spacer.gif" />
+    <Content Include="ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="ckeditor\plugins\icons.png" />
+    <Content Include="ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor\plugins\preview\preview.html" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\tmp.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="ckeditor\samples\ajax.html" />
+    <Content Include="ckeditor\samples\api.html" />
+    <Content Include="ckeditor\samples\appendto.html" />
+    <Content Include="ckeditor\samples\assets\inlineall\logo.png" />
+    <Content Include="ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="ckeditor\samples\assets\sample.css" />
+    <Content Include="ckeditor\samples\assets\sample.jpg" />
+    <Content Include="ckeditor\samples\assets\uilanguages\languages.js" />
+    <Content Include="ckeditor\samples\datafiltering.html" />
+    <Content Include="ckeditor\samples\divreplace.html" />
+    <Content Include="ckeditor\samples\index.html" />
+    <Content Include="ckeditor\samples\inlineall.html" />
+    <Content Include="ckeditor\samples\inlinebycode.html" />
+    <Content Include="ckeditor\samples\inlinetextarea.html" />
+    <Content Include="ckeditor\samples\jquery.html" />
+    <Content Include="ckeditor\samples\plugins\dialog\assets\my_dialog.js" />
+    <Content Include="ckeditor\samples\plugins\dialog\dialog.html" />
+    <Content Include="ckeditor\samples\plugins\enterkey\enterkey.html" />
+    <Content Include="ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="ckeditor\samples\plugins\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="ckeditor\samples\plugins\htmlwriter\outputforflash.html" />
+    <Content Include="ckeditor\samples\plugins\htmlwriter\outputhtml.html" />
+    <Content Include="ckeditor\samples\plugins\magicline\magicline.html" />
+    <Content Include="ckeditor\samples\plugins\toolbar\toolbar.html" />
+    <Content Include="ckeditor\samples\plugins\wysiwygarea\fullpage.html" />
+    <Content Include="ckeditor\samples\readonly.html" />
+    <Content Include="ckeditor\samples\replacebyclass.html" />
+    <Content Include="ckeditor\samples\replacebycode.html" />
+    <Content Include="ckeditor\samples\sample.css" />
+    <Content Include="ckeditor\samples\sample.js" />
+    <Content Include="ckeditor\samples\tabindex.html" />
+    <Content Include="ckeditor\samples\uicolor.html" />
+    <Content Include="ckeditor\samples\uilanguages.html" />
+    <Content Include="ckeditor\samples\xhtmlstyle.html" />
+    <Content Include="ckeditor\skins\moono\dialog.css" />
+    <Content Include="ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="ckeditor\skins\moono\dialog_opera.css" />
+    <Content Include="ckeditor\skins\moono\editor.css" />
+    <Content Include="ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="ckeditor\skins\moono\icons.png" />
+    <Content Include="ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="ckeditor\skins\moono\images\close.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="ckeditor\skins\moono\images\lock.png" />
+    <Content Include="ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="ckeditor\styles.js" />
+    <Content Include="css\jquery.bxslider.css" />
+    <Content Include="css\lightbox1.css" />
+    <Content Include="css\main-menu.css" />
+    <Content Include="css\screen1.css" />
+    <Content Include="HinhAnhHoatDong\1406509164208.jpg" />
+    <Content Include="HinhAnhHoatDong\BIWASE 2014-07-28 15-33-28.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-nm-xlctcn.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-nm-xlnrr.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-vpbiwase-1.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-vpbiwase-2.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-vpbiwase-3.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-vpbiwase.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnda-1.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnda-2.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnda-3.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnda-4.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnda-5.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnda-6.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnda-7.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnda.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncndt-1.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncndt.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnklh-1.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnklh-2.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnklh-3.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnklh-4.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnklh.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnpv-1.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncnpv.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncntdm-1.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncntdm-2.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncntdm.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncntu-1.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xncntu.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xndvdt-1.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xndvdt.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-1.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-10.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-11.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-12.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-2.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-3.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-4.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-5.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-6.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-7.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-8.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct-9.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlct.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlnt-1.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlnt-2.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlnt-3.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlnt-4.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlnt-5.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlnt-6.png" />
+    <Content Include="HinhAnhHoatDong\img-ctyxn-xnxlnt.png" />
+    <Content Include="HinhAnhHoatDong\tieude-tinnoibo.png" />
+    <Content Include="HinhAnhHoatDong\trangtinchitiet2.png" />
+    <Content Include="HinhAnhHoatDong\trangtinchitiet4.png" />
+    <Content Include="HinhAnhHoatDong\_355F7097209145680BD17E.exe" />
+    <Content Include="Hinh\350x203.gif" />
+    <Content Include="Hinh\banner\banner1.png" />
+    <Content Include="Hinh\banner\banner2.png" />
+    <Content Include="Hinh\banner\banner3.png" />
+    <Content Include="Hinh\banner\logo-tdmwater.png" />
+    <Content Include="Hinh\BUTTON.gif" />
+    <Content Include="Hinh\chitiet-button.png" />
+    <Content Include="Hinh\footer\backtotop-icon.png" />
+    <Content Include="Hinh\footer\dangonline-icon.png" />
+    <Content Include="Hinh\footer\footer-bg.png" />
+    <Content Include="Hinh\footer\tencty-text-footer.png" />
+    <Content Include="Hinh\footer\thongketruycap-bg.png" />
+    <Content Include="Hinh\footer\thongketruycap-text-footer.png" />
+    <Content Include="Hinh\footer\tongtruycap-icon.png" />
+    <Content Include="Hinh\footer\trangchu13-bo-cuc-moi.png" />
+    <Content Include="Hinh\gachngang-tinnoibo.png" />
+    <Content Include="Hinh\Ghi.gif" />
+    <Content Include="Hinh\indicator.gif" />
+    <Content Include="Hinh\sitecon\firstpage-en-icon.png" />
+    <Content Include="Hinh\sitecon\firstpage-icon.png" />
+    <Content Include="Hinh\sitecon\lastpage-en-icon.png" />
+    <Content Include="Hinh\sitecon\lastpage-icon.png" />
+    <Content Include="Hinh\sitecon\nextpage-icon.png" />
+    <Content Include="Hinh\sitecon\previouspage-icon.png" />
+    <Content Include="Hinh\sitecon\tieude-lienhe.png" />
+    <Content Include="Hinh\sitecon\tieude-tinnoibo.png" />
+    <Content Include="Hinh\slider\slider-bg.png" />
+    <Content Include="Hinh\slider\slider-hinh1.png" />
+    <Content Include="Hinh\slider\slider-hinh2.png" />
+    <Content Include="Hinh\slider\slider-hinh3.png" />
+    <Content Include="Hinh\slider\slider-hinh4.png" />
+    <Content Include="Hinh\slider\slider-nutchitiet.png" />
+    <Content Include="Hinh\slider\slider-tencty.png" />
+    <Content Include="Hinh\slider\sliderRight-hinh1.png" />
+    <Content Include="Hinh\slider\sliderRight-hinh2.png" />
+    <Content Include="Hinh\slider\sliderRight-hinh3.png" />
+    <Content Include="Hinh\slider\sliderRight-hinh4.png" />
+    <Content Include="Hinh\Sua.gif" />
+    <Content Include="Hinh\Them.gif" />
+    <Content Include="Hinh\Tim.gif" />
+    <Content Include="Hinh\trangchu\3dBg.png" />
+    <Content Include="Hinh\trangchu\duaxedap-logo.jpg" />
+    <Content Include="Hinh\trangchu\duaxedap-logo.png" />
+    <Content Include="Hinh\trangchu\gachngang-max.png" />
+    <Content Include="Hinh\trangchu\gachngang-thongbao.png" />
+    <Content Include="Hinh\trangchu\gachngang-tintuccodong.png" />
+    <Content Include="Hinh\trangchu\gachngang-tintuchoatdong.png" />
+    <Content Include="Hinh\trangchu\hotrokhachhang-logo.png" />
+    <Content Include="Hinh\trangchu\hotrokhachhang-text.png" />
+    <Content Include="Hinh\trangchu\hotrotructuyen-text.png" />
+    <Content Include="Hinh\trangchu\kienthucnganhnuoc-logo.png" />
+    <Content Include="Hinh\trangchu\light-bottom.png" />
+    <Content Include="Hinh\trangchu\light-left.png" />
+    <Content Include="Hinh\trangchu\light-right.png" />
+    <Content Include="Hinh\trangchu\logo-biwase.png" />
+    <Content Include="Hinh\trangchu\logo-db.png" />
+    <Content Include="Hinh\trangchu\logo-ntp.png" />
+    <Content Include="Hinh\trangchu\logo-tdmwater.png" />
+    <Content Include="Hinh\trangchu\muitenden-duoi.png" />
+    <Content Include="Hinh\trangchu\muitenden-phai.png" />
+    <Content Include="Hinh\trangchu\muitenden-trai.png" />
+    <Content Include="Hinh\trangchu\muitenden-tren.png" />
+    <Content Include="Hinh\trangchu\muitendo-icon.png" />
+    <Content Include="Hinh\trangchu\phone-icon.png" />
+    <Content Include="Hinh\trangchu\skype-icon.png" />
+    <Content Include="Hinh\trangchu\thongbao1-icon.png" />
+    <Content Include="Hinh\trangchu\thongbao2-icon.png" />
+    <Content Include="Hinh\trangchu\thongbao3-icon.png" />
+    <Content Include="Hinh\trangchu\tieude-hinhanhhoatdong.png" />
+    <Content Include="Hinh\trangchu\tieude-khovideo.png" />
+    <Content Include="Hinh\trangchu\tieude-lienketweb.png" />
+    <Content Include="Hinh\trangchu\tieude-thongbao.png" />
+    <Content Include="Hinh\trangchu\tieude-thutucvanban.png" />
+    <Content Include="Hinh\trangchu\tieude-tintuccodong.png" />
+    <Content Include="Hinh\trangchu\tieude-tintuchoatdong.png" />
+    <Content Include="Hinh\trangchu\yahoo-icon.png" />
+    <Content Include="img\close.png" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\next.png" />
+    <Content Include="img\prev.png" />
+    <Content Include="jquery.bxslider\jquery.bxsliderRight.js" />
+    <Content Include="jquery.bxslider\jquery.bxsliderRight.min.js" />
+    <Content Include="jquery.bxslider\jquery.bxsliderlogo.min.js" />
+    <Content Include="jquery.bxslider\jquery.bxsliderlogo.js" />
+    <Content Include="jquery.bxslider\images\bx_loader.gif" />
+    <Content Include="jquery.bxslider\images\controls.png" />
+    <Content Include="jquery.bxslider\jquery.bxslider.css" />
+    <Content Include="jquery.bxslider\jquery.bxslider.js" />
+    <Content Include="jquery.bxslider\jquery.bxslider.min.js" />
+    <Content Include="jquery.bxslider\jquery.easing.1.3.js" />
+    <Content Include="jquery.bxslider\jquery.easing.compatibility.js" />
+    <Content Include="jquery.bxslider\jquery.imageLens.js" />
+    <Content Include="jquery.bxslider\plugins\jquery.easing.1.3.js" />
+    <Content Include="jquery.bxslider\plugins\jquery.fitvids.js" />
+    <Content Include="Jquery\amazingslider.js" />
+    <Content Include="Jquery\initslider-1.js" />
+    <Content Include="Jquery\jquery-1.9.1.js" />
+    <Content Include="Jquery\jquery.imageLens.js" />
+    <Content Include="Jquery\jquery.js" />
+    <Content Include="Jquery\jquery.media.js" />
+    <Content Include="Jquery\jquery.metadata.js" />
+    <Content Include="Jquery\skin\arrows-32-32-0.png" />
+    <Content Include="Jquery\skin\bottomshadow-110-95-4.png" />
+    <Content Include="Jquery\skin\carouselarrows-32-32-0.png" />
+    <Content Include="Jquery\skin\carouselarrows-32-32-1.png" />
+    <Content Include="Jquery\skin\featuredarrow-16-8-0-backup.png" />
+    <Content Include="Jquery\skin\featuredarrow-16-8-0.png" />
+    <Content Include="Jquery\skin\featuredarrow-8-16-0-2.png" />
+    <Content Include="Jquery\skin\featuredarrow-8-16-0.png" />
+    <Content Include="Jquery\skin\navarrows-28-28-0.png" />
+    <Content Include="Jquery\skin\navbuttonbgimage-28-28-0.png" />
+    <Content Include="Jquery\skin\navplaypause-28-28-0.png" />
+    <Content Include="Jquery\skin\play-32-32-0.png" />
+    <Content Include="Jquery\skin\playvideo-64-64-0.png" />
+    <Content Include="Jquery\thang.js" />
+    <Content Include="Jquery\~initslider-1.js.htm" />
+    <Content Include="js\amazingslider.js" />
+    <Content Include="js\arrows-32-32-0.png" />
+    <Content Include="js\bjqs-1.3.js" />
+    <Content Include="js\bjqs-1.3.min.js" />
+    <Content Include="js\bullet-16-16-3.png" />
+    <Content Include="js\carouselarrows-32-32-0.png" />
+    <Content Include="js\dg-picture-zoom-autoload.js" />
+    <Content Include="js\dg-picture-zoom.js" />
+    <Content Include="js\external\mootools-1.2.4-core-yc.js" />
+    <Content Include="js\external\mootools-more.js" />
+    <Content Include="js\Gruntfile.js" />
+    <Content Include="js\horizontal-scroll.js" />
+    <Content Include="js\initslider-1.js" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery-1.11.0.min.js" />
+    <Content Include="js\jquery-1.9.1.js" />
+    <Content Include="js\jquery.flexslider-min.js" />
+    <Content Include="js\jquery.flexslider.js" />
+    <Content Include="js\jquery.imageLens.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.media.js" />
+    <Content Include="js\jquery.metadata.js" />
+    <Content Include="js\jquery.panelSnap.js" />
+    <Content Include="js\jquery.promoSlide.js" />
+    <Content Include="js\jquery.smint.js" />
+    <Content Include="js\libs\jquery.secret-source.min.js" />
+    <Content Include="js\lightbox.js" />
+    <Content Include="js\lightbox.min.js" />
+    <Content Include="js\modernizr.js" />
+    <Content Include="js\Moi\amazingslider.js" />
+    <Content Include="js\Moi\arrows-32-32-0.png" />
+    <Content Include="js\Moi\bullet-16-16-3.png" />
+    <Content Include="js\Moi\carouselarrows-32-32-0.png" />
+    <Content Include="js\Moi\initslider-1.js" />
+    <Content Include="js\Moi\jquery-1.11.0.min.js" />
+    <Content Include="js\Moi\jquery.flexslider-min.js" />
+    <Content Include="js\Moi\jquery.flexslider.js" />
+    <Content Include="js\Moi\jquery.js" />
+    <Content Include="js\Moi\lightbox.min.js" />
+    <Content Include="js\Moi\navarrows-28-28-0.png" />
+    <Content Include="js\Moi\navbuttonbgimage-28-28-0.png" />
+    <Content Include="js\Moi\navplaypause-28-28-0.png" />
+    <Content Include="js\Moi\playvideo-64-64-0.png" />
+    <Content Include="js\Moi\previewarrow-16-8-1.png" />
+    <Content Include="js\navarrows-28-28-0.png" />
+    <Content Include="js\navbuttonbgimage-28-28-0.png" />
+    <Content Include="js\navplaypause-28-28-0.png" />
+    <Content Include="js\playvideo-64-64-0.png" />
+    <Content Include="js\previewarrow-16-8-1.png" />
+    <Content Include="js\qunit-1.12.0.js" />
+    <Content Include="js\tests.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Uploads\1-biwase.jpg" />
+    <Content Include="Uploads\1.jpg" />
+    <Content Include="Uploads\1.png" />
+    <Content Include="Uploads\10_Year_BIWASE-720p.jpg" />
+    <Content Include="Uploads\1111-nho.jpg" />
+    <Content Include="Uploads\1111.jpg" />
+    <Content Include="Uploads\1234556.jpg" />
+    <Content Include="Uploads\19122013.jpg" />
+    <Content Include="Uploads\2-di_an-tn.jpg" />
+    <Content Include="Uploads\2.jpg" />
+    <Content Include="Uploads\2.png" />
+    <Content Include="Uploads\2222.jpg" />
+    <Content Include="Uploads\26112013-nho.jpg" />
+    <Content Include="Uploads\26112013.jpg" />
+    <Content Include="Uploads\3-khu_lien_hop-tn.jpg" />
+    <Content Include="Uploads\3-khu_lien_hop.jpg" />
+    <Content Include="Uploads\3.jpg" />
+    <Content Include="Uploads\3.png" />
+    <Content Include="Uploads\4.png" />
+    <Content Include="Uploads\5.png" />
+    <Content Include="Uploads\99999.jpg" />
+    <Content Include="Uploads\bangiao-nho.jpg" />
+    <Content Include="Uploads\battayhoptac.jpg" />
+    <Content Include="Uploads\bdnewcity1.png" />
+    <Content Include="Uploads\Bear.bmp" />
+    <Content Include="Uploads\Capture.JPG" />
+    <Content Include="Uploads\chang4.png" />
+    <Content Include="Uploads\Chat_Thai.jpg" />
+    <Content Include="Uploads\chinhsuaanh-nho.jpg" />
+    <Content Include="Uploads\chinhsuaanh.png" />
+    <Content Include="Uploads\chucmungnammoi-1.png" />
+    <Content Include="Uploads\ctn010620131.jpg" />
+    <Content Include="Uploads\ctn020320131.jpg" />
+    <Content Include="Uploads\ctn020320132.jpg" />
+    <Content Include="Uploads\ctn020620131.jpg" />
+    <Content Include="Uploads\ctn020620132.jpg" />
+    <Content Include="Uploads\ctn020620133.jpg" />
+    <Content Include="Uploads\ctn020620134.jpg" />
+    <Content Include="Uploads\ctn030320131.jpg" />
+    <Content Include="Uploads\ctn03092013.jpg" />
+    <Content Include="Uploads\ctn040320131.jpg" />
+    <Content Include="Uploads\ctn040320132.jpg" />
+    <Content Include="Uploads\ctn040320134.jpg" />
+    <Content Include="Uploads\ctn040320135.jpg" />
+    <Content Include="Uploads\ctn050320131.jpg" />
+    <Content Include="Uploads\ctn050320132.jpg" />
+    <Content Include="Uploads\ctn050320133.jpg" />
+    <Content Include="Uploads\ctn060320131.jpg" />
+    <Content Include="Uploads\ctn070320131.jpg" />
+    <Content Include="Uploads\ctn080320131.jpg" />
+    <Content Include="Uploads\ctn09032012.jpg" />
+    <Content Include="Uploads\ctn090320121.jpg" />
+    <Content Include="Uploads\ctn090320122.jpg" />
+    <Content Include="Uploads\ctn090320131.jpg" />
+    <Content Include="Uploads\ctn110320121 %281%29.jpg" />
+    <Content Include="Uploads\ctn110320121.jpg" />
+    <Content Include="Uploads\ctn12032012.jpg" />
+    <Content Include="Uploads\ctn121120130-nho.jpg" />
+    <Content Include="Uploads\ctn121120130.jpg" />
+    <Content Include="Uploads\ctn13032012.jpg" />
+    <Content Include="Uploads\ctn13042013.jpg" />
+    <Content Include="Uploads\ctn130420131.jpg" />
+    <Content Include="Uploads\ctn13082013.jpg" />
+    <Content Include="Uploads\ctn130820131.jpg" />
+    <Content Include="Uploads\ctn140320121.jpg" />
+    <Content Include="Uploads\ctn14062013.jpg" />
+    <Content Include="Uploads\ctn15032012.jpg" />
+    <Content Include="Uploads\ctn15082013.jpg" />
+    <Content Include="Uploads\ctn16082013.jpg" />
+    <Content Include="Uploads\ctn170820131.jpg" />
+    <Content Include="Uploads\ctn18092013.jpg" />
+    <Content Include="Uploads\ctn20042012.jpg" />
+    <Content Include="Uploads\ctn210520121.jpg" />
+    <Content Include="Uploads\ctn210520122.jpg" />
+    <Content Include="Uploads\ctn210520123.jpg" />
+    <Content Include="Uploads\ctn21082013.jpg" />
+    <Content Include="Uploads\ctn21102013.jpg" />
+    <Content Include="Uploads\ctn220820130-small.jpg" />
+    <Content Include="Uploads\ctn23082013.jpg" />
+    <Content Include="Uploads\ctn23092013.jpg" />
+    <Content Include="Uploads\ctn26082013.jpg" />
+    <Content Include="Uploads\ctn261020130-small.jpg" />
+    <Content Include="Uploads\ctn261020130.jpg" />
+    <Content Include="Uploads\ctn261020131-nho.jpg" />
+    <Content Include="Uploads\ctn261020131.jpg" />
+    <Content Include="Uploads\ctn270220131.jpg" />
+    <Content Include="Uploads\ctn29022012.jpg" />
+    <Content Include="Uploads\ctn290520131.jpg" />
+    <Content Include="Uploads\ctn290520132.jpg" />
+    <Content Include="Uploads\ctn290620131.jpg" />
+    <Content Include="Uploads\ctn290620132.jpg" />
+    <Content Include="Uploads\ctn290620133.jpg" />
+    <Content Include="Uploads\cty-small.png" />
+    <Content Include="Uploads\daihoicodong-nho.jpg" />
+    <Content Include="Uploads\danhgiachatluongdangvien.jpg" />
+    <Content Include="Uploads\danhgiachatluongdv.jpg" />
+    <Content Include="Uploads\DSC_0070.JPG" />
+    <Content Include="Uploads\DSC_0215.JPG" />
+    <Content Include="Uploads\DSC_0468.JPG" />
+    <Content Include="Uploads\DSC_0484.JPG" />
+    <Content Include="Uploads\DSC_0703.JPG" />
+    <Content Include="Uploads\DSC_1276.JPG" />
+    <Content Include="Uploads\emailsurvey.jpg" />
+    <Content Include="Uploads\fullscreen.png" />
+    <Content Include="Uploads\giamdoc.jpg" />
+    <Content Include="Uploads\hdxh-13012014-2.png" />
+    <Content Include="Uploads\hdxh01022008-0.jpg" />
+    <Content Include="Uploads\hdxh03032007-1.jpg" />
+    <Content Include="Uploads\hdxh03062014-nho.jpg" />
+    <Content Include="Uploads\hdxh07082013-0.jpg" />
+    <Content Include="Uploads\hdxh09062014-0.jpg" />
+    <Content Include="Uploads\hdxh10102008-1.jpg" />
+    <Content Include="Uploads\hdxh10102008-2.jpg" />
+    <Content Include="Uploads\hdxh12062010-1.jpg" />
+    <Content Include="Uploads\hdxh16112009-1.jpg" />
+    <Content Include="Uploads\hdxh17082009-1.jpg" />
+    <Content Include="Uploads\hdxh200920060-4.jpg" />
+    <Content Include="Uploads\hdxh22072011-1.jpg" />
+    <Content Include="Uploads\hdxh23032010-1.jpg" />
+    <Content Include="Uploads\hdxh25072008-1.jpg" />
+    <Content Include="Uploads\hdxh25112006-1.jpg" />
+    <Content Include="Uploads\hdxh26072009-1.jpg" />
+    <Content Include="Uploads\hdxh26072009-2.jpg" />
+    <Content Include="Uploads\hdxh28052014-nho.png" />
+    <Content Include="Uploads\hdxh31052014-nho.jpg" />
+    <Content Include="Uploads\Hinh doan malaysia 11_12.jpg" />
+    <Content Include="Uploads\hinhnoibat.png" />
+    <Content Include="Uploads\Hydrangeas.jpg" />
+    <Content Include="Uploads\images %281%29.jpg" />
+    <Content Include="Uploads\images.jpg" />
+    <Content Include="Uploads\img-cty.png" />
+    <Content Include="Uploads\img-xlnt1.png" />
+    <Content Include="Uploads\IMG_3833.JPG" />
+    <Content Include="Uploads\logo-compost-255x145.png" />
+    <Content Include="Uploads\logo-phanbon2.png" />
+    <Content Include="Uploads\marketing-nha-hang.jpg" />
+    <Content Include="Uploads\mrthien.png" />
+    <Content Include="Uploads\noPhoto.jpg" />
+    <Content Include="Uploads\noPhoto.png" />
+    <Content Include="Uploads\NUOC_VA_MOI_TRUONG_01_4_2013.jpg" />
+    <Content Include="Uploads\NUOC_VA_MOI_TRUONG_03-4-2013_-_bao_ve_su_dung_hop_ly_tai_gnuyen_nuoc.jpg" />
+    <Content Include="Uploads\NUOC_VA_MOI_TRUONG_06-5-2013_-_o_nhiem_nguon_nuoc.jpg" />
+    <Content Include="Uploads\NUOC_VA_MOI_TRUONG_13-5-2013_-_Hop_UBND__vd_O_nhiem_MT_-_Du_an_xd_xn_nuoc_thai.jpg" />
+    <Content Include="Uploads\phongtrungbaysptaiche-nho.jpg" />
+    <Content Include="Uploads\photo.php.jpg" />
+    <Content Include="Uploads\poster.jpg" />
+    <Content Include="Uploads\securedownload %281%29.jpg" />
+    <Content Include="Uploads\slider-chucmungnammoi.png" />
+    <Content Include="Uploads\slider-khaimacduaxedap.png" />
+    <Content Include="Uploads\slider-thongbaomoisotuyen-icb02.png" />
+    <Content Include="Uploads\slider-thongbaomoisotuyen-icb03-en.png" />
+    <Content Include="Uploads\slider-thongbaomoisotuyen-icb03.png" />
+    <Content Include="Uploads\slider-thongbaomoisotuyen-icb04-en.png" />
+    <Content Include="Uploads\slider-thongbaomoisotuyen-icb04.png" />
+    <Content Include="Uploads\slider-thongbaomoithau-so1.png" />
+    <Content Include="Uploads\slider-thongbaomoithau-so2.png" />
+    <Content Include="Uploads\slider-thongbaomoithauso1-en.png" />
+    <Content Include="Uploads\slider-thongbaomoithauso1.png" />
+    <Content Include="Uploads\slider-thongbaomoithauso2-en.png" />
+    <Content Include="Uploads\slider-thongbaomoithauso2.png" />
+    <Content Include="Uploads\slider-thongbaotuyendung-dientu-tudong.png" />
+    <Content Include="Uploads\startworkingday.png" />
+    <Content Include="Uploads\t12.jpg" />
+    <Content Include="Uploads\thamtan-nho.jpg" />
+    <Content Include="Uploads\thamtan-small.jpg" />
+    <Content Include="Uploads\thamtan.jpg" />
+    <Content Include="Uploads\tholo-nho.jpg" />
+    <Content Include="Uploads\thongbao.jpg" />
+    <Content Include="Uploads\thongbaomoisotuyen-en.png" />
+    <Content Include="Uploads\thongbaomoisotuyen.png" />
+    <Content Include="Uploads\thongbaomoithau.png" />
+    <Content Include="Uploads\tnb01072011.jpg" />
+    <Content Include="Uploads\tnb03082009-1.jpg" />
+    <Content Include="Uploads\tnb03082009-2.jpg" />
+    <Content Include="Uploads\tnb04012014-1.jpg" />
+    <Content Include="Uploads\tnb04012014-2.jpg" />
+    <Content Include="Uploads\tnb06032014.png" />
+    <Content Include="Uploads\tnb06052014-1.png" />
+    <Content Include="Uploads\tnb06052014-2.png" />
+    <Content Include="Uploads\tnb06102009-1.jpg" />
+    <Content Include="Uploads\tnb07012009-nho.jpg" />
+    <Content Include="Uploads\tnb07052014-2.png" />
+    <Content Include="Uploads\tnb07052014-nho.png" />
+    <Content Include="Uploads\tnb07112009-nho.jpg" />
+    <Content Include="Uploads\tnb09042014-1.png" />
+    <Content Include="Uploads\tnb10032010-1.jpg" />
+    <Content Include="Uploads\tnb12022014-1.png" />
+    <Content Include="Uploads\tnb12092009-nho.jpg" />
+    <Content Include="Uploads\tnb12092009-nho2.jpg" />
+    <Content Include="Uploads\tnb13022014-2.png" />
+    <Content Include="Uploads\tnb14032007-1.jpg" />
+    <Content Include="Uploads\tnb140320140.jpg" />
+    <Content Include="Uploads\tnb14042010-1.jpg" />
+    <Content Include="Uploads\tnb14092007-1.jpg" />
+    <Content Include="Uploads\tnb15082006-1.jpg" />
+    <Content Include="Uploads\tnb15122010-0.jpg" />
+    <Content Include="Uploads\tnb16012012-nho.jpg" />
+    <Content Include="Uploads\tnb16062014-0.png" />
+    <Content Include="Uploads\tnb17032008-1.jpg" />
+    <Content Include="Uploads\tnb17052014-2.png" />
+    <Content Include="Uploads\tnb17062014-0.png" />
+    <Content Include="Uploads\tnb17062014.png" />
+    <Content Include="Uploads\tnb17072010.jpg" />
+    <Content Include="Uploads\tnb17082009-1.jpg" />
+    <Content Include="Uploads\tnb18062018.png" />
+    <Content Include="Uploads\tnb18122013-0.jpg" />
+    <Content Include="Uploads\tnb19102007-1.jpg" />
+    <Content Include="Uploads\tnb20012014-11.png" />
+    <Content Include="Uploads\tnb21042008-1.jpg" />
+    <Content Include="Uploads\tnb21092009-1.jpg" />
+    <Content Include="Uploads\tnb22062006-1.jpg" />
+    <Content Include="Uploads\tnb25032014.jpg" />
+    <Content Include="Uploads\tnb25052010-2.jpg" />
+    <Content Include="Uploads\tnb25092008.jpg" />
+    <Content Include="Uploads\tnb26112013-0.jpg" />
+    <Content Include="Uploads\tnb270620110.jpg" />
+    <Content Include="Uploads\tnb27082010.jpg" />
+    <Content Include="Uploads\tnb271120110.jpg" />
+    <Content Include="Uploads\tnb28022014.png" />
+    <Content Include="Uploads\tnb28052014-nho.png" />
+    <Content Include="Uploads\tnb28102009-nho.jpg" />
+    <Content Include="Uploads\tnb29032011-3.jpg" />
+    <Content Include="Uploads\tnb29042014-1-max.png" />
+    <Content Include="Uploads\tnb29042014-1.png" />
+    <Content Include="Uploads\tnb29042014-2.png" />
+    <Content Include="Uploads\tnb29042014-nho.png" />
+    <Content Include="Uploads\tnb30112008-1.jpg" />
+    <Content Include="Uploads\tnb31052014-nho.png" />
+    <Content Include="Uploads\tnb31122013-1.jpg" />
+    <Content Include="Uploads\trienlamphanlan-nho.jpg" />
+    <Content Include="Uploads\trunuocuong-nho.jpg" />
+    <Content Include="Uploads\vanphong-231.png" />
+    <Content Include="Uploads\vhtt-19022014-1.png" />
+    <Content Include="Uploads\vhtt-19022014.png" />
+    <Content Include="Uploads\vhtt01062010-5.jpg" />
+    <Content Include="Uploads\vhtt01062010.jpg" />
+    <Content Include="Uploads\vhtt01092007-1.jpg" />
+    <Content Include="Uploads\vhtt02062008-1.jpg" />
+    <Content Include="Uploads\vhtt03032011-1.jpg" />
+    <Content Include="Uploads\vhtt03052008-1.jpg" />
+    <Content Include="Uploads\vhtt03062014-nho.jpg" />
+    <Content Include="Uploads\vhtt03092006-4.jpg" />
+    <Content Include="Uploads\vhtt05032014-1.jpg" />
+    <Content Include="Uploads\vhtt05032014.jpg" />
+    <Content Include="Uploads\vhtt05062010-1.jpg" />
+    <Content Include="Uploads\vhtt06012014.jpg" />
+    <Content Include="Uploads\vhtt06102009.jpg" />
+    <Content Include="Uploads\vhtt07052014-nho.jpg" />
+    <Content Include="Uploads\vhtt07052014-nho2.png" />
+    <Content Include="Uploads\vhtt08032008-1.jpg" />
+    <Content Include="Uploads\vhtt08032011-2.jpg" />
+    <Content Include="Uploads\vhtt08102007-1.jpg" />
+    <Content Include="Uploads\vhtt08122007.jpg" />
+    <Content Include="Uploads\vhtt09032011-1.jpg" />
+    <Content Include="Uploads\vhtt10032009-1.jpg" />
+    <Content Include="Uploads\vhtt10032011-1.jpg" />
+    <Content Include="Uploads\vhtt10032014-44.jpg" />
+    <Content Include="Uploads\vhtt11032011-1.jpg" />
+    <Content Include="Uploads\vhtt12032011-1.jpg" />
+    <Content Include="Uploads\vhtt12072008-1.jpg" />
+    <Content Include="Uploads\vhtt13032011-0.jpg" />
+    <Content Include="Uploads\vhtt13032011-1.jpg" />
+    <Content Include="Uploads\vhtt13062010-1.jpg" />
+    <Content Include="Uploads\vhtt15032010-2.jpg" />
+    <Content Include="Uploads\vhtt15062007-1.jpg" />
+    <Content Include="Uploads\vhtt17012014-1.jpg" />
+    <Content Include="Uploads\vhtt19022014.png" />
+    <Content Include="Uploads\vhtt19052008-1.jpg" />
+    <Content Include="Uploads\vhtt19072008-3.jpg" />
+    <Content Include="Uploads\vhtt20102007-1.jpg" />
+    <Content Include="Uploads\vhtt20102307-0.jpg" />
+    <Content Include="Uploads\vhtt26022014-1.png" />
+    <Content Include="Uploads\vhtt26032010-3.jpg" />
+    <Content Include="Uploads\vhtt28062008.jpg" />
+    <Content Include="Uploads\vhtt28062010-1.jpg" />
+    <Content Include="Uploads\vhtt28092009-1.jpg" />
+    <Content Include="Uploads\vhtt30102008-1.jpg" />
+    <Content Include="Uploads\vhtt30102008-2.jpg" />
+    <Content Include="Uploads\vhtt30112008-0.jpg" />
+    <Content Include="Uploads\vhttxedap2014-75.jpg" />
+    <Content Include="Uploads\vhttxedap2014-85.jpg" />
+    <Content Include="Uploads\vhttxedap2014-bemacdongdoi.jpg" />
+    <Content Include="Uploads\vhxh28062008.jpg" />
+    <Content Include="Uploads\WP_000156.jpg" />
+    <Content Include="Uploads\xncnda.jpg" />
+    <Content Include="Uploads\xnxlct.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanTri.aspx.cs">
+      <DependentUpon>QuanTri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanTri.aspx.designer.cs">
+      <DependentUpon>QuanTri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanTriAlbum.aspx.cs">
+      <DependentUpon>QuanTriAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanTriAlbum.aspx.designer.cs">
+      <DependentUpon>QuanTriAlbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanTriHinhAnh.aspx.cs">
+      <DependentUpon>QuanTriHinhAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanTriHinhAnh.aspx.designer.cs">
+      <DependentUpon>QuanTriHinhAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanTriLienHe.aspx.cs">
+      <DependentUpon>QuanTriLienHe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanTriLienHe.aspx.designer.cs">
+      <DependentUpon>QuanTriLienHe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanTriNguoiDung.aspx.cs">
+      <DependentUpon>QuanTriNguoiDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanTriNguoiDung.aspx.designer.cs">
+      <DependentUpon>QuanTriNguoiDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanTriTinCK.aspx.cs">
+      <DependentUpon>QuanTriTinCK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanTriTinCK.aspx.designer.cs">
+      <DependentUpon>QuanTriTinCK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanTriTinTuc.aspx.cs">
+      <DependentUpon>QuanTriTinTuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanTriTinTuc.aspx.designer.cs">
+      <DependentUpon>QuanTriTinTuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QuanTriVideos.aspx.cs">
+      <DependentUpon>QuanTriVideos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QuanTriVideos.aspx.designer.cs">
+      <DependentUpon>QuanTriVideos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Album.ascx.cs">
+      <DependentUpon>Album.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Album.ascx.designer.cs">
+      <DependentUpon>Album.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CBTT_KetNoiNhaDauTu.ascx.cs">
+      <DependentUpon>CBTT_KetNoiNhaDauTu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CBTT_KetNoiNhaDauTu.ascx.designer.cs">
+      <DependentUpon>CBTT_KetNoiNhaDauTu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CBTT_ThongTinCoPhieu.ascx.cs">
+      <DependentUpon>CBTT_ThongTinCoPhieu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CBTT_ThongTinCoPhieu.ascx.designer.cs">
+      <DependentUpon>CBTT_ThongTinCoPhieu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CBTT_BaoCaoThuongNien.ascx.cs">
+      <DependentUpon>CBTT_BaoCaoThuongNien.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CBTT_BaoCaoThuongNien.ascx.designer.cs">
+      <DependentUpon>CBTT_BaoCaoThuongNien.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CBTT_BaoCaoTaiChinh.ascx.cs">
+      <DependentUpon>CBTT_BaoCaoTaiChinh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CBTT_BaoCaoTaiChinh.ascx.designer.cs">
+      <DependentUpon>CBTT_BaoCaoTaiChinh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CBTT_DaiHoiDongCDTN.ascx.cs">
+      <DependentUpon>CBTT_DaiHoiDongCDTN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CBTT_DaiHoiDongCDTN.ascx.designer.cs">
+      <DependentUpon>CBTT_DaiHoiDongCDTN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CBTT_DaiHoiDongCDBT.ascx.cs">
+      <DependentUpon>CBTT_DaiHoiDongCDBT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CBTT_DaiHoiDongCDBT.ascx.designer.cs">
+      <DependentUpon>CBTT_DaiHoiDongCDBT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CBTT_ThongTinNhaDauTu.ascx.cs">
+      <DependentUpon>CBTT_ThongTinNhaDauTu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CBTT_ThongTinNhaDauTu.ascx.designer.cs">
+      <DependentUpon>CBTT_ThongTinNhaDauTu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\HoSoPhapLy.ascx.cs">
+      <DependentUpon>HoSoPhapLy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\HoSoPhapLy.ascx.designer.cs">
+      <DependentUpon>HoSoPhapLy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\GioiThieuDichVu.ascx.cs">
+      <DependentUpon>GioiThieuDichVu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\GioiThieuDichVu.ascx.designer.cs">
+      <DependentUpon>GioiThieuDichVu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\GioiThieuChung.ascx.cs">
+      <DependentUpon>GioiThieuChung.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\GioiThieuChung.ascx.designer.cs">
+      <DependentUpon>GioiThieuChung.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\ChiTietTin.ascx.cs">
+      <DependentUpon>ChiTietTin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\ChiTietTin.ascx.designer.cs">
+      <DependentUpon>ChiTietTin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CongBoThongTin.ascx.cs">
+      <DependentUpon>CongBoThongTin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CongBoThongTin.ascx.designer.cs">
+      <DependentUpon>CongBoThongTin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\HinhAnh.ascx.cs">
+      <DependentUpon>HinhAnh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\HinhAnh.ascx.designer.cs">
+      <DependentUpon>HinhAnh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Index.ascx.cs">
+      <DependentUpon>Index.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Index.ascx.designer.cs">
+      <DependentUpon>Index.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\LienHe.ascx.cs">
+      <DependentUpon>LienHe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\LienHe.ascx.designer.cs">
+      <DependentUpon>LienHe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\BanLanhDao.ascx.cs">
+      <DependentUpon>BanLanhDao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\BanLanhDao.ascx.designer.cs">
+      <DependentUpon>BanLanhDao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Linhvuckinhdoanh.ascx.cs">
+      <DependentUpon>Linhvuckinhdoanh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Linhvuckinhdoanh.ascx.designer.cs">
+      <DependentUpon>Linhvuckinhdoanh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\Popup.ascx.cs">
+      <DependentUpon>Popup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\Popup.ascx.designer.cs">
+      <DependentUpon>Popup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\QuanTri.ascx.cs">
+      <DependentUpon>QuanTri.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\QuanTri.ascx.designer.cs">
+      <DependentUpon>QuanTri.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\QuanTriAlbum.ascx.cs">
+      <DependentUpon>QuanTriAlbum.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\QuanTriAlbum.ascx.designer.cs">
+      <DependentUpon>QuanTriAlbum.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\QuanTriHinhAnh.ascx.cs">
+      <DependentUpon>QuanTriHinhAnh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\QuanTriHinhAnh.ascx.designer.cs">
+      <DependentUpon>QuanTriHinhAnh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\QuanTriNguoiDung.ascx.cs">
+      <DependentUpon>QuanTriNguoiDung.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\QuanTriNguoiDung.ascx.designer.cs">
+      <DependentUpon>QuanTriNguoiDung.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\QuanTriTinCK.ascx.cs">
+      <DependentUpon>QuanTriTinCK.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\QuanTriTinCK.ascx.designer.cs">
+      <DependentUpon>QuanTriTinCK.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\QuanTriTinTuc.ascx.cs">
+      <DependentUpon>QuanTriTinTuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\QuanTriTinTuc.ascx.designer.cs">
+      <DependentUpon>QuanTriTinTuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\QuanTriVideo.ascx.cs">
+      <DependentUpon>QuanTriVideo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\QuanTriVideo.ascx.designer.cs">
+      <DependentUpon>QuanTriVideo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\QuanTriYeuCauLienHe.ascx.cs">
+      <DependentUpon>QuanTriYeuCauLienHe.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\QuanTriYeuCauLienHe.ascx.designer.cs">
+      <DependentUpon>QuanTriYeuCauLienHe.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\ThongBao.ascx.cs">
+      <DependentUpon>ThongBao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\ThongBao.ascx.designer.cs">
+      <DependentUpon>ThongBao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\CBTT_BanTinNhaDauTu.ascx.cs">
+      <DependentUpon>CBTT_BanTinNhaDauTu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\CBTT_BanTinNhaDauTu.ascx.designer.cs">
+      <DependentUpon>CBTT_BanTinNhaDauTu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASCX\TinChatLuongNuoc.ascx.cs">
+      <DependentUpon>TinChatLuongNuoc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASCX\TinChatLuongNuoc.ascx.designer.cs">
+      <DependentUpon>TinChatLuongNuoc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\Album.aspx.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\Album.aspx.designer.cs">
+      <DependentUpon>Album.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\CBTT_DaiHoiDongCDTN.aspx.cs">
+      <DependentUpon>CBTT_DaiHoiDongCDTN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\CBTT_DaiHoiDongCDTN.aspx.designer.cs">
+      <DependentUpon>CBTT_DaiHoiDongCDTN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\CBTT_BaoCaoTaiChinh.aspx.cs">
+      <DependentUpon>CBTT_BaoCaoTaiChinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\CBTT_BaoCaoTaiChinh.aspx.designer.cs">
+      <DependentUpon>CBTT_BaoCaoTaiChinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\CBTT_BaoCaoThuongNien.aspx.cs">
+      <DependentUpon>CBTT_BaoCaoThuongNien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\CBTT_BaoCaoThuongNien.aspx.designer.cs">
+      <DependentUpon>CBTT_BaoCaoThuongNien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\CBTT_ThongTinCoPhieu.aspx.cs">
+      <DependentUpon>CBTT_ThongTinCoPhieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\CBTT_ThongTinCoPhieu.aspx.designer.cs">
+      <DependentUpon>CBTT_ThongTinCoPhieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\CBTT_KetNoiNhaDauTu.aspx.cs">
+      <DependentUpon>CBTT_KetNoiNhaDauTu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\CBTT_KetNoiNhaDauTu.aspx.designer.cs">
+      <DependentUpon>CBTT_KetNoiNhaDauTu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\CBTT_DaiHoiDongCDBT.aspx.cs">
+      <DependentUpon>CBTT_DaiHoiDongCDBT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\CBTT_DaiHoiDongCDBT.aspx.designer.cs">
+      <DependentUpon>CBTT_DaiHoiDongCDBT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\CBTT_ThongTinNhaDauTu.aspx.cs">
+      <DependentUpon>CBTT_ThongTinNhaDauTu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\CBTT_ThongTinNhaDauTu.aspx.designer.cs">
+      <DependentUpon>CBTT_ThongTinNhaDauTu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\GioiThieuDichVu.aspx.cs">
+      <DependentUpon>GioiThieuDichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\GioiThieuDichVu.aspx.designer.cs">
+      <DependentUpon>GioiThieuDichVu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\GioiThieuChung.aspx.cs">
+      <DependentUpon>GioiThieuChung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\GioiThieuChung.aspx.designer.cs">
+      <DependentUpon>GioiThieuChung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\ChiTietTinTuc.aspx.cs">
+      <DependentUpon>ChiTietTinTuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\ChiTietTinTuc.aspx.designer.cs">
+      <DependentUpon>ChiTietTinTuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\HinhAnh.aspx.cs">
+      <DependentUpon>HinhAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\HinhAnh.aspx.designer.cs">
+      <DependentUpon>HinhAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\HoSoPhapLy.aspx.cs">
+      <DependentUpon>HoSoPhapLy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\HoSoPhapLy.aspx.designer.cs">
+      <DependentUpon>HoSoPhapLy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\LienHe.aspx.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\LienHe.aspx.designer.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\BanLanhDao.aspx.cs">
+      <DependentUpon>BanLanhDao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\BanLanhDao.aspx.designer.cs">
+      <DependentUpon>BanLanhDao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\linhvuckinhdoanh.aspx.cs">
+      <DependentUpon>linhvuckinhdoanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\linhvuckinhdoanh.aspx.designer.cs">
+      <DependentUpon>linhvuckinhdoanh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\Popup.aspx.cs">
+      <DependentUpon>Popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\Popup.aspx.designer.cs">
+      <DependentUpon>Popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\ThongBao.aspx.cs">
+      <DependentUpon>ThongBao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\ThongBao.aspx.designer.cs">
+      <DependentUpon>ThongBao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\CBTT_BanTinNhaDauTu.aspx.cs">
+      <DependentUpon>CBTT_BanTinNhaDauTu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\CBTT_BanTinNhaDauTu.aspx.designer.cs">
+      <DependentUpon>CBTT_BanTinNhaDauTu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\TinChatLuongNuoc.aspx.cs">
+      <DependentUpon>TinChatLuongNuoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\TinChatLuongNuoc.aspx.designer.cs">
+      <DependentUpon>TinChatLuongNuoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPX\CongBoThongTin.aspx.cs">
+      <DependentUpon>CongBoThongTin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPX\CongBoThongTin.aspx.designer.cs">
+      <DependentUpon>CongBoThongTin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatChuoi.cs" />
+    <Compile Include="DataBindSQL.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ckeditor\CHANGES.md" />
+    <None Include="ckeditor\LICENSE.md" />
+    <None Include="ckeditor\plugins\scayt\LICENSE.md" />
+    <None Include="ckeditor\plugins\scayt\README.md" />
+    <None Include="ckeditor\plugins\wsc\LICENSE.md" />
+    <None Include="ckeditor\plugins\wsc\README.md" />
+    <None Include="ckeditor\README.md" />
+    <None Include="ckeditor\samples\assets\posteddata.php" />
+    <None Include="ckeditor\samples\assets\Thumbs.db" />
+    <None Include="ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <None Include="ckeditor\samples\sample_posteddata.php" />
+    <None Include="ckeditor\skins\moono\readme.md" />
+    <Content Include="Site.Master" />
+    <Content Include="Hinh\sitecon\Thumbs.db" />
+    <Content Include="Hinh\Thumbs.db" />
+    <Content Include="FileScan\GiayChungNhanDangKyKinhDoanh_L7.pdf" />
+    <Content Include="FileScan\MauDauCongTy.pdf" />
+    <Content Include="FIle\GiayChungNhanDangKyKinhDoanh_L7.pdf" />
+    <Content Include="FIle\MauDauCongTy.pdf" />
+    <None Include="jquery.bxslider\bower.json" />
+    <None Include="jquery.bxslider\readme.md" />
+    <None Include="Jquery\skin\Thumbs.db" />
+    <Content Include="js\.DS_Store" />
+    <Content Include="js\jquery-1.11.0.min.map" />
+    <Content Include="js\lightbox.min.map" />
+    <Content Include="js\Moi\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bussinesslogic\Bussinesslogic.csproj">
+      <Project>{C81C8898-2D43-4373-8072-1BCC9DBA9EAE}</Project>
+      <Name>Bussinesslogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BussinessObject\BussinessObject.csproj">
+      <Project>{CCFB8510-DF21-4543-B5F0-097BFB27CE84}</Project>
+      <Name>BussinessObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>20165</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

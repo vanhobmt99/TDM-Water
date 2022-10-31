@@ -1,0 +1,209 @@
+@font-face {
+    font-family: UVNAiCapNang;
+    src: url(../fonts/UVNAiCapNang.TTF);
+}
+
+.KhungIndex {
+    width: 960px;
+}
+
+#viewport-logo {
+    width: 960px;
+}
+
+#slider1 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    #slider1 li {
+        padding: 0;
+        margin: 0;
+        zoom: 0;
+        background: 255,255,255,1;
+    }
+
+#slide2 {
+    text-align: center;
+    height: 123px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #000;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+a:active {
+    text-decoration: none;
+    color: #000;
+}
+
+.imgTinTucHoatDong {
+    width: 172px;
+    height: 100px;
+}
+
+#video-bg {
+    background-color: #454545;
+}
+
+.TenVideo {
+    color: black;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: normal;
+    text-align:: left;
+    text-decoration: none;
+}
+
+    .TenVideo:hover {
+        color: #006dd2 !important;
+    }
+
+.tieude:hover {
+    color: #006dd2 !important;
+}
+
+.tieude-tintuchoatdong:hover {
+    text-decoration: underline !important;
+}
+
+#kienthucnganhnuoc:hover {
+    border: 5px solid #ffbebe !important;
+}
+
+.bx-pager-itemlogo {
+    display: none;
+}
+
+.bx-controls-directionlogo {
+    position: absolute;
+    top: 50%;
+}
+
+.bx-pager-itemRight {
+    display: none;
+}
+
+.bx-controls-directionRight {
+    position: relative;
+    left: 50%;
+}
+
+.bx-captionRight {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: none repeat scroll 0% 0% rgba(80, 80, 80, 0.75);
+    width: 100%;
+}
+
+.bx-wrapper .bx-captionRight span {
+    color: #FFF;
+    font-family: Arial;
+    display: block;
+    font-size: 0.85em;
+    padding: 10px;
+}
+
+#ContentPlaceHolder1_Index1_dlTinTucHoatDong_imgTinHoatDong_2 {
+    display: none;
+}
+
+#ContentPlaceHolder1_Index1_dlThongBao_imgThongBao_2 {
+    display: none;
+}
+
+#ContentPlaceHolder1_Index1_dlVanBan_imgVanBan_2 {
+    display: none;
+}
+
+#ContentPlaceHolder1_Index1_dlTinTucCoDong_imgTinCoDong_2 {
+    display: none;
+}
+
+#ContentPlaceHolder1_Index1_dlTinTucCoDong_imgTinCoDong_5 {
+    display: none;
+}
+
+#ContentPlaceHolder1_Index1_dlVideos_imgVideo_2 {
+    display: none;
+}
+
+.slide {
+    margin-bottom: 7px !important;
+}
+
+    .slide img {
+        height: 118px !important;
+    }
+
+.tieude-muctin {
+    background-image: url("../Hinh/trangchu/tieude-muctin-blue.jpg");
+    background-repeat: no-repeat;
+    text-align: center;
+    display: inline-block;
+    width: 220px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+    .tieude-muctin a {
+        font-family: Arial;
+        color: white;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+        .tieude-muctin a:hover {
+            color: #cccccc;
+            transition: 0.2s;
+        }
+
+
+
+.tieude-khonglienket a:hover {
+    color: white;
+}
+
+.tieude-muctin-red {
+    background-image: url("../Hinh/trangchu/tieude-muctin-red.jpg");
+    background-repeat: no-repeat;
+    text-align: center;
+    display: inline-block;
+    width: 500px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+    .tieude-muctin-red a {
+        font-family: Arial;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+        .tieude-muctin-red a:hover {
+            color: #cccccc;
+            transition: 0.2s;
+        }
+
+.tieude-sau {
+    margin-top: 10px;
+}
